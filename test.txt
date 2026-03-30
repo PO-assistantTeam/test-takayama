@@ -1,5 +1,4 @@
 hello world
 初めてのgithub
 
-コミット
-コミット
+ブランチ作成
