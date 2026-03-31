@@ -12,17 +12,20 @@ git config --global user.email "GitHubに登録したメールアドレス"
 
 ### プロジェクトの始め方
 
-#### 方法A: clone で始める（おすすめ）
+#### パターン1: 自分で0からリポジトリを作成する場合
+
+**手順A: clone で始める（おすすめ）**
 1. GitHubのブラウザでリポジトリを作成
 2. リポジトリページの「Code」ボタンからURLをコピー
 3. ターミナルで以下を実行：
 ```bash
+cd ~/Desktop
 git clone https://github.com/ユーザー名/リポジトリ名.git
 ```
+4. Cursorの「File」→「Open Folder」でクローンしたフォルダを開く
 - `git init` と `git remote add` を自動でやってくれるので一番楽
-- クローンしたフォルダに移動して作業を開始する
 
-#### 方法B: git init で始める
+**手順B: git init で始める**
 既にローカルにフォルダがある場合はこちら：
 ```bash
 git init
@@ -31,7 +34,20 @@ git remote add origin https://github.com/ユーザー名/リポジトリ名.git
 - `git init` → 今あるフォルダをGitリポジトリにする
 - `git remote add` → GitHubのリポジトリと接続する
 
-※ どちらの方法でも、まずGitHubブラウザでリポジトリを作成する必要がある
+※ どちらの手順でも、まずGitHubブラウザでリポジトリを作成する必要がある
+
+#### パターン2: チームメンバーが作成済みのリポジトリに参加する場合
+
+1. チームメンバーからリポジトリのURLを教えてもらう（またはGitHubで確認する）
+2. ターミナルで以下を実行：
+```bash
+cd ~/Desktop
+git clone https://github.com/チームのユーザー名/リポジトリ名.git
+```
+3. Cursorの「File」→「Open Folder」でクローンしたフォルダを開く
+4. 作業開始（チーム開発の場合はブランチを作ってから作業する）
+
+※ リポジトリが非公開（Private）の場合は、事前にリポジトリのオーナーから招待してもらう必要がある
 
 ---
 
